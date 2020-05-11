@@ -10,6 +10,8 @@ namespace TaskFirst
     {
         static void Main(string[] args)
         {
+            InputDataConvert.ReadTxtFile();
+            Console.ReadKey();
         }
     }
 }
