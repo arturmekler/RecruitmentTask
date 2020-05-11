@@ -10,10 +10,13 @@ namespace TaskFirst
 {
     class InputDataConvert
     {
-        public static void ReadTxtFile()
+        List<Magazine> magazines = new List<Magazine>();
+
+        public void ReadTxtFile()
         {
             string line;
             int counter = 0;
+
             try
             {
                 using (StreamReader file = new StreamReader("InputData.txt"))
@@ -35,7 +38,7 @@ namespace TaskFirst
             }
         }
 
-        public static void GenerateAllMaterials(string line)
+        public void GenerateAllMaterials(string line)
         {
             if (line.FirstOrDefault() == '#' || String.IsNullOrEmpty(line))
             {
@@ -58,13 +61,24 @@ namespace TaskFirst
 
                 foreach(var m in magazine)
                 {
+                    var name = m.Split(',').FirstOrDefault();
                     var countElementInMagazine = m.Split(',').ElementAt(1);
+                    var tuple = Tuple.Create(Int32.Parse(countElementInMagazine), businessObject);
 
-                    Magazine mag = new Magazine()
+                    if (!magazines.Any(el => el.Name == name))
                     {
-                        Name = m.Split(',').FirstOrDefault()
-                    };
-                }
+                        Magazine mag = new Magazine()
+                        {
+                            Name = name
+                        };
+                        mag.AddBusinessObjectToList(tuple);
+                        magazines.Add(mag);
+                    }
+                    else
+                    {
+                        magazines.Where(asd => asd.Name == name).FirstOrDefault().AddBusinessObjectToList(tuple);
+                    }
+                }           
             }
         }
     }
