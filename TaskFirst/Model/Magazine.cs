@@ -13,7 +13,7 @@ namespace TaskFirst.Model
     class Magazine
     {
         public string Name { get; set; }
-        public List<Tuple<int, BusinessObject>> businessObjects = new List<Tuple<int, BusinessObject>>();            // tutaj sa trzymane elementy ... a gdzie wrzucic ich ilosc?
+        public List<Tuple<int, BusinessObject>> businessObjects = new List<Tuple<int, BusinessObject>>();
         public int CountOfBusinessObjects
         {
             get
