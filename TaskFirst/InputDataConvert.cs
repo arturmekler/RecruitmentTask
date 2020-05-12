@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,76 +9,53 @@ namespace TaskFirst
 {
     class InputDataConvert
     {
-        List<Magazine> magazines = new List<Magazine>();
+        public List<Magazine> magazines = new List<Magazine>();
 
-        public void ReadTxtFile()
+        public string[] Spliting(string line)
         {
-            string line;
-            int counter = 0;
+            return line.Split(';');
+        }
 
-            try
+
+        public BusinessObject ReadBusinessObject(string[] splitedLine)
+        {
+            BusinessObject businessObject = new BusinessObject()
             {
-                using (StreamReader file = new StreamReader("InputData.txt"))
+                Name = splitedLine?.FirstOrDefault(),
+                ID = splitedLine?.ElementAt(1)
+            };
+            return businessObject;
+        }
+
+        public void ReadMagazines(string[] splitedLine, BusinessObject businessObject)
+        {
+            var magazines = splitedLine.ElementAt(2)?.Split('|');
+
+            foreach (var element in magazines)
+            {
+                var magazineName = element.Split(',').FirstOrDefault();
+                var countElementInMagazine = element.Split(',').ElementAt(1);
+                var businessObjectWithCount = Tuple.Create(Int32.Parse(countElementInMagazine), businessObject);
+
+                if (!this.magazines.Any(el => el.Name == magazineName))
                 {
-                    while ((line = file.ReadLine()) != null)
+                    Magazine mag = new Magazine()
                     {
-
-                        GenerateAllMaterials(line);
-                        counter++;
-                    }
-
-                    file.Close();
+                        Name = magazineName
+                    };
+                    mag.AddBusinessObjectToList(businessObjectWithCount);
+                    this.magazines.Add(mag);
+                }
+                else
+                {
+                    this.magazines.Where(asd => asd.Name == magazineName).FirstOrDefault().AddBusinessObjectToList(businessObjectWithCount);
                 }
             }
-            catch (IOException e)
-            {
-                Console.WriteLine("The file could not be read:");
-                Console.WriteLine(e.Message);
-            }
         }
 
-        public void GenerateAllMaterials(string line)
-        {
-            if (line.FirstOrDefault() == '#' || String.IsNullOrEmpty(line))
-            {
+        
+            
 
-            }
-            else
-            {
-                Console.WriteLine(line);
-                var splitedLine = line.Split(';');
-
-
-                BusinessObject businessObject = new BusinessObject()
-                {
-                    Name = splitedLine?.FirstOrDefault(),
-                    ID = splitedLine?.ElementAt(1)
-                };
-
-                var magazine = splitedLine.ElementAt(2)?.Split('|');
-
-
-                foreach(var m in magazine)
-                {
-                    var name = m.Split(',').FirstOrDefault();
-                    var countElementInMagazine = m.Split(',').ElementAt(1);
-                    var tuple = Tuple.Create(Int32.Parse(countElementInMagazine), businessObject);
-
-                    if (!magazines.Any(el => el.Name == name))
-                    {
-                        Magazine mag = new Magazine()
-                        {
-                            Name = name
-                        };
-                        mag.AddBusinessObjectToList(tuple);
-                        magazines.Add(mag);
-                    }
-                    else
-                    {
-                        magazines.Where(asd => asd.Name == name).FirstOrDefault().AddBusinessObjectToList(tuple);
-                    }
-                }           
-            }
-        }
+            
     }
 }

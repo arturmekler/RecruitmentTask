@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InputDataConvert.cs" />
+    <Compile Include="InputDataReading.cs" />
     <Compile Include="Model\BusinessObject.cs" />
     <Compile Include="Model\Magazine.cs" />
+    <Compile Include="Output.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
