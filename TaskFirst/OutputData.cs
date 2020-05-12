@@ -35,5 +35,20 @@ namespace TaskFirst
                 Console.WriteLine(String.Empty);
             }
         }
+
+        public List<string> OutputToFile(List<Magazine> magazines)
+        {
+            List<string> lines = new List<string>();
+            foreach (var mag in magazines)
+            {
+                lines.Add(mag.Name + " Total " + "(" + mag.CountOfBusinessObjects + ")");
+                mag.businessObjects.ForEach(elem =>
+                {
+                    lines.Add(elem.Item2.ID + ": " + elem.Item1);
+                });
+                lines.Add(String.Empty);
+            }
+            return lines;
+        }
     }
 }

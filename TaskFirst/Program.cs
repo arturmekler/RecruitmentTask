@@ -14,6 +14,7 @@ namespace TaskFirst
             var inputDataContent = inputData.TextContent();
 
             InputDataConvert inputDataConvert = new InputDataConvert();
+            OutputDataSaveToFile outputdata = new OutputDataSaveToFile();
 
             foreach(var el in inputDataContent)
             {
@@ -26,6 +27,10 @@ namespace TaskFirst
             var sortedMagazines = new OutputData();
             var qwe = sortedMagazines.OutputSorting(magazines);
             sortedMagazines.OutputToConsole(qwe);
+            var wewe = sortedMagazines.OutputToFile(qwe);
+
+            outputdata.SaveToFile(wewe);
+
             Console.ReadKey();
         }
     }
