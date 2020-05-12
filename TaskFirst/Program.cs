@@ -23,6 +23,9 @@ namespace TaskFirst
             }
 
             var magazines = inputDataConvert.magazines;
+            var sortedMagazines = new OutputData();
+            var qwe = sortedMagazines.OutputSorting(magazines);
+            sortedMagazines.OutputToConsole(qwe);
             Console.ReadKey();
         }
     }
