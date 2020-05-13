@@ -10,6 +10,7 @@ namespace TaskFirst
     class InputDataConvert : IInputDataConvert
     {
         public List<Magazine> Magazines { get; set; } = new List<Magazine>();
+        public List<BusinessObject> BusinessObjects { get; set; } = new List<BusinessObject>();
 
         public string[] Spliting(string line)
         {
@@ -23,6 +24,8 @@ namespace TaskFirst
                 Name = splitedLine?.FirstOrDefault(),
                 ID = splitedLine?.ElementAt(1)
             };
+            BusinessObjects.Add(businessObject);
+
             return businessObject;
         }
 

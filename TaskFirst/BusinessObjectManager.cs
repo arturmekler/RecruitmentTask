@@ -10,9 +10,22 @@ namespace TaskFirst
     class BusinessObjectManager
     {
         public static void AddBusinessObjectToList(Tuple<int, BusinessObject> tuple, 
-            List<Tuple<int, BusinessObject>> businessObjects)
+            List<Tuple<int, BusinessObject>> businessObjectsWithCount)
         {
-            businessObjects.Add(tuple);
+            if (businessObjectsWithCount.Any(businessObject => businessObject.Item2.ID == tuple.Item2.ID))
+            {
+                var businessObjectWithCount = businessObjectsWithCount
+                    .Where(businessObject => businessObject.Item2.ID == tuple.Item2.ID)
+                    .FirstOrDefault();
+                var increasedCountInBusinessObject = Tuple.Create(businessObjectWithCount.Item1 + tuple.Item1, businessObjectWithCount.Item2);
+                var index = businessObjectsWithCount.FindIndex(businessObject => businessObject.Item2.ID == tuple.Item2.ID);
+
+                businessObjectsWithCount[index] = increasedCountInBusinessObject;
+            }
+            else
+            {
+                businessObjectsWithCount.Add(tuple);
+            }
         }
     }
 }
