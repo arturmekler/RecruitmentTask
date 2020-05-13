@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationLogic.cs" />
+    <Compile Include="BusinessObjectManager.cs" />
     <Compile Include="DisplayData.cs" />
     <Compile Include="Interfaces\IDisplayData.cs" />
     <Compile Include="InputDataReadingFromConsole.cs" />

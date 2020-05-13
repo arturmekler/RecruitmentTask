@@ -11,10 +11,5 @@ namespace TaskFirst.Model
         public string Name { get; set; }
         public List<Tuple<int, BusinessObject>> businessObjects { get; set; } = new List<Tuple<int, BusinessObject>>();
         public int CountOfBusinessObjects => businessObjects.Sum(el => el.Item1);
-
-        public void AddBusinessObjectToList(Tuple<int, BusinessObject> tuple)
-        {
-            businessObjects.Add(tuple);
-        }
     }
 }

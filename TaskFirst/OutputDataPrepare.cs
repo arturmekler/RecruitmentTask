@@ -14,8 +14,8 @@ namespace TaskFirst
             return magazines
                 .Select(p =>
                     {
-                        var wqeqwe = p.businessObjects.OrderBy(bussObj => bussObj.Item2.ID).ToList();
-                        p.businessObjects = wqeqwe;
+                        var businessObjectWithCount = p.businessObjects.OrderBy(bussObj => bussObj.Item2.ID).ToList();
+                        p.businessObjects = businessObjectWithCount;
                         return p;
                     })
                 .OrderByDescending(el => el.Name)

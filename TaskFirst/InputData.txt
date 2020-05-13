@@ -7,6 +7,7 @@ Yankee Hardware 110 Deg. Hinge;COM-123908;WH-A,10|WH-B,11
 # Existing materials, restocked
 
 Hdw Accuride CB0115-CASSRC - Locking Handle Kit - Black;CB0115-CASSRC;WH-C,13|WH-B,5
+Hdw Accuride CB0115-CASSRC - Locking Handle Kit - Black;CB0115-CASSRC;WH-C,13|WH-B,5
 
 Veneer - Charter Industries - 3M Adhesive Backed - Cherry 10mm - Paper Back;3M-Cherry-10mm;WH-A,10|WH-B,1
 

@@ -42,12 +42,13 @@ namespace TaskFirst
                     {
                         Name = magazineName
                     };
-                    mag.AddBusinessObjectToList(businessObjectWithCount);
+                    BusinessObjectManager.AddBusinessObjectToList(businessObjectWithCount, mag.businessObjects);
                     Magazines.Add(mag);
                 }
                 else
                 {
-                    Magazines.Where(m => m.Name == magazineName).FirstOrDefault().AddBusinessObjectToList(businessObjectWithCount);
+                    var mag = Magazines.Where(m => m.Name == magazineName).FirstOrDefault();
+                    BusinessObjectManager.AddBusinessObjectToList(businessObjectWithCount,mag.businessObjects);
                 }
             }
         }
