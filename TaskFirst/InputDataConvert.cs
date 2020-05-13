@@ -16,7 +16,6 @@ namespace TaskFirst
             return line.Split(';');
         }
 
-
         public BusinessObject ReadBusinessObject(string[] splitedLine)
         {
             BusinessObject businessObject = new BusinessObject()
@@ -48,14 +47,9 @@ namespace TaskFirst
                 }
                 else
                 {
-                    Magazines.Where(asd => asd.Name == magazineName).FirstOrDefault().AddBusinessObjectToList(businessObjectWithCount);
+                    Magazines.Where(m => m.Name == magazineName).FirstOrDefault().AddBusinessObjectToList(businessObjectWithCount);
                 }
             }
         }
-
-        
-            
-
-            
     }
 }

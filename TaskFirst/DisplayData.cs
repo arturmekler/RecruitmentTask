@@ -13,12 +13,12 @@ namespace TaskFirst
         {
             foreach (var mag in magazines)
             {
+                Console.WriteLine(String.Empty);
                 Console.WriteLine(mag.Name + " Total " + "(" + mag.CountOfBusinessObjects + ")");
                 mag.businessObjects.ForEach(elem =>
                 {
                     Console.WriteLine(elem.Item2.ID + ": " + elem.Item1);
                 });
-                Console.WriteLine(String.Empty);
             }
         }
 

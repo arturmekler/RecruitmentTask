@@ -14,8 +14,6 @@ namespace TaskFirst
         IDataSaveToFile dataSaveToFile;
         IOutputDataPrepare outputDataPrepare;
         IDisplayData display;
-        List<Magazine> magazines;
-
 
         public ApplicationLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert,
             IDataSaveToFile dataSaveToFile, IOutputDataPrepare outputDataPrepare, IDisplayData display)
