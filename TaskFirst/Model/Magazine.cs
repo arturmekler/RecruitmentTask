@@ -10,7 +10,7 @@ namespace TaskFirst.Model
     // elementy jakie trzyma oraz ich ilosc
 
         // elementy sa trzymane w Lis
-    class Magazine
+    public class Magazine
     {
         public string Name { get; set; }
         public List<Tuple<int, BusinessObject>> businessObjects = new List<Tuple<int, BusinessObject>>();

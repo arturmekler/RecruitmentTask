@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskFirst.Model
 {
-    class BusinessObject
+    public class BusinessObject
     {
         public string ID { get; set; }
         public string Name { get; set; }

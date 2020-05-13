@@ -13,30 +13,14 @@ namespace TaskFirst
         static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
+            builder.RegisterType<ApplicationLogic>().As<IApplicationLogic>();
             builder.RegisterType<InputDataReading>().As<IInputDataReading>();
+            builder.RegisterType<InputDataConvert>().As<IInputDataConvert>();
             Container = builder.Build();
+
+            var app = Container.Resolve<IApplicationLogic>();
+            app.ProcessData();
   
-
-            var inputData = new InputDataReading();
-            var inputDataContent = inputData.TextContent();
-
-            InputDataConvert inputDataConvert = new InputDataConvert();
-            OutputDataSaveToFile outputdata = new OutputDataSaveToFile();
-
-            foreach(var el in inputDataContent)
-            {
-                var splitedLine = inputDataConvert.Spliting(el);
-                var businessObject = inputDataConvert.ReadBusinessObject(splitedLine);
-                inputDataConvert.ReadMagazines(splitedLine, businessObject);
-            }
-
-            var magazines = inputDataConvert.magazines;
-            var sortedMagazines = new OutputData();
-            var qwe = sortedMagazines.OutputSorting(magazines);
-            sortedMagazines.OutputToConsole(qwe);
-            var wewe = sortedMagazines.OutputToFile(qwe);
-
-            outputdata.SaveToFile(wewe);
 
             Console.ReadKey();
         }

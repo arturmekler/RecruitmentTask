@@ -7,9 +7,10 @@ using TaskFirst.Model;
 
 namespace TaskFirst
 {
-    class InputDataConvert
+    class InputDataConvert : IInputDataConvert
     {
-        public List<Magazine> magazines = new List<Magazine>();
+        public List<Magazine> Magazines { get; set; } = new List<Magazine>();
+        //public List<Magazine> magazines = new List<Magazine>();
 
         public string[] Spliting(string line)
         {
@@ -37,18 +38,18 @@ namespace TaskFirst
                 var countElementInMagazine = element.Split(',').ElementAt(1);
                 var businessObjectWithCount = Tuple.Create(Int32.Parse(countElementInMagazine), businessObject);
 
-                if (!this.magazines.Any(el => el.Name == magazineName))
+                if (!Magazines.Any(el => el.Name == magazineName))
                 {
                     Magazine mag = new Magazine()
                     {
                         Name = magazineName
                     };
                     mag.AddBusinessObjectToList(businessObjectWithCount);
-                    this.magazines.Add(mag);
+                    Magazines.Add(mag);
                 }
                 else
                 {
-                    this.magazines.Where(asd => asd.Name == magazineName).FirstOrDefault().AddBusinessObjectToList(businessObjectWithCount);
+                    Magazines.Where(asd => asd.Name == magazineName).FirstOrDefault().AddBusinessObjectToList(businessObjectWithCount);
                 }
             }
         }

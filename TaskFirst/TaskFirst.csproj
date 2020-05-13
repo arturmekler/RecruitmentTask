@@ -56,6 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationLogic.cs" />
+    <Compile Include="IApplicationLogic.cs" />
+    <Compile Include="IInputDataConvert.cs" />
     <Compile Include="IInputDataReading.cs" />
     <Compile Include="InputDataConvert.cs" />
     <Compile Include="InputDataReading.cs" />
