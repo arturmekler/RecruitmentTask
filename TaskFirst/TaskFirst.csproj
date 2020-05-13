@@ -57,15 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationLogic.cs" />
-    <Compile Include="IApplicationLogic.cs" />
-    <Compile Include="IInputDataConvert.cs" />
-    <Compile Include="IInputDataReading.cs" />
+    <Compile Include="Interfaces\IApplicationLogic.cs" />
+    <Compile Include="Interfaces\IDataSaveToFile.cs" />
+    <Compile Include="Interfaces\IInputDataConvert.cs" />
+    <Compile Include="Interfaces\IInputDataReading.cs" />
     <Compile Include="InputDataConvert.cs" />
     <Compile Include="InputDataReading.cs" />
+    <Compile Include="Interfaces\IOutputDataPrepare.cs" />
     <Compile Include="Model\BusinessObject.cs" />
     <Compile Include="Model\Magazine.cs" />
-    <Compile Include="OutputData.cs" />
-    <Compile Include="OutputDataSaveToFile.cs" />
+    <Compile Include="OutputDataPrepare.cs" />
+    <Compile Include="DataSaveToFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,5 +80,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

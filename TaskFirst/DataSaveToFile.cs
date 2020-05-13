@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskFirst
 {
-    class OutputDataSaveToFile
+    class DataSaveToFile : IDataSaveToFile
     {
         public void SaveToFile(List<string> lines)
         {

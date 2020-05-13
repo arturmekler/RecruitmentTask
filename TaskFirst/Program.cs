@@ -16,6 +16,8 @@ namespace TaskFirst
             builder.RegisterType<ApplicationLogic>().As<IApplicationLogic>();
             builder.RegisterType<InputDataReading>().As<IInputDataReading>();
             builder.RegisterType<InputDataConvert>().As<IInputDataConvert>();
+            builder.RegisterType<DataSaveToFile>().As<IDataSaveToFile>();
+            builder.RegisterType<OutputDataPrepare>().As<IOutputDataPrepare>();
             Container = builder.Build();
 
             var app = Container.Resolve<IApplicationLogic>();

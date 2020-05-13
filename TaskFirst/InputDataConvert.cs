@@ -10,7 +10,6 @@ namespace TaskFirst
     class InputDataConvert : IInputDataConvert
     {
         public List<Magazine> Magazines { get; set; } = new List<Magazine>();
-        //public List<Magazine> magazines = new List<Magazine>();
 
         public string[] Spliting(string line)
         {

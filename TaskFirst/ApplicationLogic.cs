@@ -10,18 +10,21 @@ namespace TaskFirst
     {
         IInputDataReading inputDataReading;
         IInputDataConvert inputDataConvert;
+        IDataSaveToFile dataSaveToFile;
+        IOutputDataPrepare outputDataPrepare;
 
-        public ApplicationLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert)
+        public ApplicationLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert,
+            IDataSaveToFile dataSaveToFile, IOutputDataPrepare outputDataPrepare)
         {
             this.inputDataConvert = inputDataConvert;
             this.inputDataReading = inputDataReading;
+            this.dataSaveToFile = dataSaveToFile;
+            this.outputDataPrepare = outputDataPrepare;
         }
 
         public void ProcessData()
         {
             var inputDataContent = inputDataReading.TextContent();
-
-            OutputDataSaveToFile outputdata = new OutputDataSaveToFile();
 
             foreach (var el in inputDataContent)
             {
@@ -31,12 +34,11 @@ namespace TaskFirst
             }
 
             var magazines = inputDataConvert.Magazines;
-            var sortedMagazines = new OutputData();
-            var qwe = sortedMagazines.OutputSorting(magazines);
-            sortedMagazines.OutputToConsole(qwe);
-            var wewe = sortedMagazines.OutputToFile(qwe);
+            var qwe = outputDataPrepare.OutputSorting(magazines);
+            outputDataPrepare.OutputToConsole(qwe);
+            var wewe = outputDataPrepare.OutputToFile(qwe);
 
-            outputdata.SaveToFile(wewe);
+            dataSaveToFile.SaveToFile(wewe);
 
             Console.ReadKey();
         }

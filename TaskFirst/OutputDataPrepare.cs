@@ -7,7 +7,7 @@ using TaskFirst.Model;
 
 namespace TaskFirst
 {
-    class OutputData
+    class OutputDataPrepare : IOutputDataPrepare
     {
         public List<Magazine> OutputSorting(List<Magazine> magazines)
         {
