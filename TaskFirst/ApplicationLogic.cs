@@ -39,8 +39,6 @@ namespace TaskFirst
             var wewe = outputDataPrepare.OutputToFile(sortedMagazines);
 
             dataSaveToFile.SaveToFile(wewe);
-
-            Console.ReadKey();
         }
 
 

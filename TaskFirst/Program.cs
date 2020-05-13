@@ -14,7 +14,7 @@ namespace TaskFirst
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<ApplicationLogic>().As<IApplicationLogic>();
-            builder.RegisterType<InputDataReading>().As<IInputDataReading>();
+            builder.RegisterType<InputDataReadingFromConsole>().As<IInputDataReading>();
             builder.RegisterType<InputDataConvert>().As<IInputDataConvert>();
             builder.RegisterType<DataSaveToFile>().As<IDataSaveToFile>();
             builder.RegisterType<OutputDataPrepare>().As<IOutputDataPrepare>();
@@ -23,7 +23,6 @@ namespace TaskFirst
             var app = Container.Resolve<IApplicationLogic>();
             app.ProcessData();
   
-
             Console.ReadKey();
         }
     }

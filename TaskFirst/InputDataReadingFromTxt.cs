@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskFirst
 {
-    public class InputDataReading : IInputDataReading
+    public class InputDataReadingFromTxt : IInputDataReading
     {
         public List<string> TextContent()
         {

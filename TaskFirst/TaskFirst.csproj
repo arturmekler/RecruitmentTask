@@ -57,12 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationLogic.cs" />
+    <Compile Include="InputDataReadingFromConsole.cs" />
     <Compile Include="Interfaces\IApplicationLogic.cs" />
     <Compile Include="Interfaces\IDataSaveToFile.cs" />
     <Compile Include="Interfaces\IInputDataConvert.cs" />
     <Compile Include="Interfaces\IInputDataReading.cs" />
     <Compile Include="InputDataConvert.cs" />
-    <Compile Include="InputDataReading.cs" />
+    <Compile Include="InputDataReadingFromTxt.cs" />
     <Compile Include="Interfaces\IOutputDataPrepare.cs" />
     <Compile Include="Model\BusinessObject.cs" />
     <Compile Include="Model\Magazine.cs" />
