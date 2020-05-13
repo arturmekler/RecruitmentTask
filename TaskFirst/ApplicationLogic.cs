@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskFirst.Model;
 
 namespace TaskFirst
 {
@@ -12,17 +13,21 @@ namespace TaskFirst
         IInputDataConvert inputDataConvert;
         IDataSaveToFile dataSaveToFile;
         IOutputDataPrepare outputDataPrepare;
+        IDisplayData display;
+        List<Magazine> magazines;
+
 
         public ApplicationLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert,
-            IDataSaveToFile dataSaveToFile, IOutputDataPrepare outputDataPrepare)
+            IDataSaveToFile dataSaveToFile, IOutputDataPrepare outputDataPrepare, IDisplayData display)
         {
             this.inputDataConvert = inputDataConvert;
             this.inputDataReading = inputDataReading;
             this.dataSaveToFile = dataSaveToFile;
             this.outputDataPrepare = outputDataPrepare;
+            this.display = display;
         }
 
-        public void ProcessData()
+        public List<Magazine> ProcessData()
         {
             var inputDataContent = inputDataReading.TextContent();
 
@@ -35,11 +40,20 @@ namespace TaskFirst
 
             var magazines = inputDataConvert.Magazines;
             var sortedMagazines = outputDataPrepare.OutputSorting(magazines);
-            outputDataPrepare.OutputToConsole(sortedMagazines);
-            var wewe = outputDataPrepare.OutputToFile(sortedMagazines);
-
-            dataSaveToFile.SaveToFile(wewe);
+            return sortedMagazines;
         }
+
+        public void DisplayConsole()
+        {
+            display.OutputToConsole(ProcessData());
+        }
+
+        public void DisplayToFile()
+        {
+            var dataToSaveToFile = display.OutputToFile(ProcessData());
+            dataSaveToFile.SaveToFile(dataToSaveToFile);
+        }
+
 
 
     }

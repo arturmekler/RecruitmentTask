@@ -18,10 +18,11 @@ namespace TaskFirst
             builder.RegisterType<InputDataConvert>().As<IInputDataConvert>();
             builder.RegisterType<DataSaveToFile>().As<IDataSaveToFile>();
             builder.RegisterType<OutputDataPrepare>().As<IOutputDataPrepare>();
+            builder.RegisterType<DisplayData>().As<IDisplayData>();
             Container = builder.Build();
 
             var app = Container.Resolve<IApplicationLogic>();
-            app.ProcessData();
+            app.DisplayConsole();
   
             Console.ReadKey();
         }
