@@ -6,21 +6,11 @@ using System.Threading.Tasks;
 
 namespace TaskFirst.Model
 {
-    // magazyn musi wiedziec o:
-    // elementy jakie trzyma oraz ich ilosc
-
-        // elementy sa trzymane w Lis
     public class Magazine
     {
         public string Name { get; set; }
-        public List<Tuple<int, BusinessObject>> businessObjects = new List<Tuple<int, BusinessObject>>();
-        public int CountOfBusinessObjects
-        {
-            get
-            {
-                return businessObjects.Sum(el => el.Item1);
-            }
-        }
+        public List<Tuple<int, BusinessObject>> businessObjects { get; set; } = new List<Tuple<int, BusinessObject>>();
+        public int CountOfBusinessObjects => businessObjects.Sum(el => el.Item1);
 
         public void AddBusinessObjectToList(Tuple<int, BusinessObject> tuple)
         {

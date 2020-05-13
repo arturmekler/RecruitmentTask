@@ -31,9 +31,9 @@ namespace TaskFirst
 
             foreach (var el in inputDataContent)
             {
-                var splitedLine = inputDataConvert.Spliting(el);
-                var businessObject = inputDataConvert.ReadBusinessObject(splitedLine);
-                inputDataConvert.ReadMagazines(splitedLine, businessObject);
+                var splittedLine = inputDataConvert.Spliting(el);
+                var businessObject = inputDataConvert.ReadBusinessObject(splittedLine);
+                inputDataConvert.ReadMagazines(splittedLine, businessObject);
             }
 
             var magazines = inputDataConvert.Magazines;
