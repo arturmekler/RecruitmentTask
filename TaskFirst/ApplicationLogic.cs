@@ -25,7 +25,7 @@ namespace TaskFirst
             this.display = display;
         }
 
-        public List<Magazine> ProcessData()
+        public List<Magazine> OutputData()
         {
             var inputDataContent = inputDataReading.TextContent();
 
@@ -43,16 +43,13 @@ namespace TaskFirst
 
         public void DisplayConsole()
         {
-            display.OutputToConsole(ProcessData());
+            display.OutputToConsole(OutputData());
         }
 
         public void DisplayToFile()
         {
-            var dataToSaveToFile = display.OutputToFile(ProcessData());
+            var dataToSaveToFile = display.OutputToFile(OutputData());
             dataSaveToFile.SaveToFile(dataToSaveToFile);
         }
-
-
-
     }
 }

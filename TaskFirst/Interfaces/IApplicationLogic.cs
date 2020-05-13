@@ -5,7 +5,7 @@ namespace TaskFirst
 {
     public interface IApplicationLogic
     {
-        List<Magazine> ProcessData();
+        List<Magazine> OutputData();
         void DisplayConsole();
         void DisplayToFile();
     }
