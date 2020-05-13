@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,14 @@ namespace TaskFirst
 {
     class Program
     {
+        private static IContainer Container { get; set; }
         static void Main(string[] args)
         {
+            var builder = new ContainerBuilder();
+            builder.RegisterType<InputDataReading>().As<IInputDataReading>();
+            Container = builder.Build();
+  
+
             var inputData = new InputDataReading();
             var inputDataContent = inputData.TextContent();
 
