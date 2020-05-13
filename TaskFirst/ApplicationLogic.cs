@@ -34,9 +34,9 @@ namespace TaskFirst
             }
 
             var magazines = inputDataConvert.Magazines;
-            var qwe = outputDataPrepare.OutputSorting(magazines);
-            outputDataPrepare.OutputToConsole(qwe);
-            var wewe = outputDataPrepare.OutputToFile(qwe);
+            var sortedMagazines = outputDataPrepare.OutputSorting(magazines);
+            outputDataPrepare.OutputToConsole(sortedMagazines);
+            var wewe = outputDataPrepare.OutputToFile(sortedMagazines);
 
             dataSaveToFile.SaveToFile(wewe);
 
