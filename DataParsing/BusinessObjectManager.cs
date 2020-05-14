@@ -7,6 +7,9 @@ using DataParsing.Model;
 
 namespace DataParsing
 {
+    /// <summary>
+    /// manages objects added to the list of business objects
+    /// </summary>
     class BusinessObjectManager
     {
         public static void AddBusinessObjectToList(Tuple<int, BusinessObject> tuple, 

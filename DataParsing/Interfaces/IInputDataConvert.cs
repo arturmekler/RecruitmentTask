@@ -7,8 +7,8 @@ namespace DataParsing
     {
         List<Magazine> Magazines { get; }
 
-        BusinessObject ReadBusinessObject(string[] splitedLine);
+        BusinessObject ReadBusinessObject(string[] splittedLine);
         void ReadMagazines(string[] splitedLine, BusinessObject businessObject);
-        string[] Spliting(string line);
+        string[] Splitting(string line);
     }
 }

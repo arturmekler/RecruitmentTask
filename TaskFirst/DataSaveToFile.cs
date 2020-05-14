@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataDisplay
 {
+    /// <summary>
+    /// saves to OutputData.txt file
+    /// </summary>
     class DataSaveToFile : IDataSaveToFile
     {
         public void SaveToFile(List<string> lines)

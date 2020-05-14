@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="ParsingLogic.cs" />
     <Compile Include="BusinessObjectManager.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="InputDataConvert.cs" />
     <Compile Include="InputDataReadingFromConsole.cs" />
     <Compile Include="InputDataReadingFromTxt.cs" />
@@ -55,11 +54,6 @@
     <Compile Include="Model\Magazine.cs" />
     <Compile Include="OutputDataPrepare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="InputData.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

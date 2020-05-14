@@ -7,6 +7,9 @@ using DataParsing.Model;
 
 namespace DataParsing
 {
+    /// <summary>
+    /// performs successive tasks for parsing data
+    /// </summary>
     public class ParsingLogic : IParsingLogic
     {
         IInputDataReading inputDataReading;
@@ -27,7 +30,7 @@ namespace DataParsing
 
             foreach (var el in inputDataContent)
             {
-                var splittedLine = inputDataConvert.Spliting(el);
+                var splittedLine = inputDataConvert.Splitting(el);
                 var businessObject = inputDataConvert.ReadBusinessObject(splittedLine);
                 inputDataConvert.ReadMagazines(splittedLine, businessObject);
             }

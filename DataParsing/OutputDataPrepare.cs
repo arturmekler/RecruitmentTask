@@ -7,6 +7,9 @@ using DataParsing.Model;
 
 namespace DataParsing
 {
+    /// <summary>
+    /// Sorts business objects by quantity and alphabetically
+    /// </summary>
     public class OutputDataPrepare : IOutputDataPrepare
     {
         public List<Magazine> OutputSorting(List<Magazine> magazines)

@@ -8,6 +8,9 @@ using DataParsing;
 
 namespace DataDisplay
 {
+    /// <summary>
+    /// write "exit" if you have finished entering data in console
+    /// </summary>
     class Program
     {
         private static IContainer Container { get; set; }

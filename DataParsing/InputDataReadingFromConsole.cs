@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataParsing
 {
+    /// <summary>
+    /// reads text from console
+    /// </summary>
     public class InputDataReadingFromConsole : IInputDataReading
     {
         public List<string> TextContent()

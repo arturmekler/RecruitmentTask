@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DataParsing
 {
+    /// <summary>
+    /// Reads data from InputData.txt file
+    /// </summary>
     public class InputDataReadingFromTxt : IInputDataReading
     {
         public List<string> TextContent()

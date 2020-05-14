@@ -7,6 +7,9 @@ using DataParsing.Model;
 
 namespace DataDisplay
 {
+    /// <summary>
+    /// prepares data to display on console or to save to file
+    /// </summary>
     class DisplayData : IDisplayData
     {
         public void OutputToConsole(List<Magazine> magazines)

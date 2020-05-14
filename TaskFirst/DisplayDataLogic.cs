@@ -8,6 +8,9 @@ using DataParsing;
 
 namespace DataDisplay
 {
+    /// <summary>
+    /// contains methods and logic to display data on console or save data into file
+    /// </summary>
     public class DisplayDataLogic : IDisplayDataLogic
     {
         IDataSaveToFile dataSaveToFile;

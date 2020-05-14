@@ -7,12 +7,16 @@ using DataParsing.Model;
 
 namespace DataParsing
 {
+    /// <summary>
+    /// converts data to business objects and magazines
+    /// </summary>
     public class InputDataConvert : IInputDataConvert
     {
+        
         public List<Magazine> Magazines { get; set; } = new List<Magazine>();
         public List<BusinessObject> BusinessObjects { get; set; } = new List<BusinessObject>();
 
-        public string[] Spliting(string line)
+        public string[] Splitting(string line)
         {
             return line.Split(';');
         }
