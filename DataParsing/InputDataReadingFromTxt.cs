@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskFirst
+namespace DataParsing
 {
     public class InputDataReadingFromTxt : IInputDataReading
     {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataParsing
 {
-    class InputDataConvert : IInputDataConvert
+    public class InputDataConvert : IInputDataConvert
     {
         public List<Magazine> Magazines { get; set; } = new List<Magazine>();
         public List<BusinessObject> BusinessObjects { get; set; } = new List<BusinessObject>();

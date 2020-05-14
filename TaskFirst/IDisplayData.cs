@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataDisplay
 {
     public interface IDisplayData
     {

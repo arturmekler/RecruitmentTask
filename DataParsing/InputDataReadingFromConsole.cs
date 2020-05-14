@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskFirst
+namespace DataParsing
 {
-    class InputDataReadingFromConsole : IInputDataReading
+    public class InputDataReadingFromConsole : IInputDataReading
     {
         public List<string> TextContent()
         {

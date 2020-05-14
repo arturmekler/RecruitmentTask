@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataParsing
 {
-    class OutputDataPrepare : IOutputDataPrepare
+    public class OutputDataPrepare : IOutputDataPrepare
     {
         public List<Magazine> OutputSorting(List<Magazine> magazines)
         {

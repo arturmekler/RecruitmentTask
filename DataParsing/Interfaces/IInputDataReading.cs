@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TaskFirst
+namespace DataParsing
 {
     public interface IInputDataReading
     {
