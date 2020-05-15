@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using DataParsing.Model;
 
-namespace DataDisplay
+namespace RecruitmentTask
 {
     public interface IDisplayData
     {

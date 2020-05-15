@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DataParsing.Model;
 using DataParsing;
 
-namespace DataDisplay
+namespace RecruitmentTask
 {
     /// <summary>
     /// contains methods and logic to display data on console or save data into file

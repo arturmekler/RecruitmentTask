@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParsing", "DataParsing\DataParsing.csproj", "{E0481F26-887C-4E36-9793-C1AF2934226F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDisplay", "DataDisplay\DataDisplay.csproj", "{B58850FA-6D78-4ED8-8848-2EDC6510EF1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentTask", "RecruitmentTask\RecruitmentTask.csproj", "{B58850FA-6D78-4ED8-8848-2EDC6510EF1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataParsing;
 
-namespace DataDisplay
+namespace RecruitmentTask
 {
     /// <summary>
     /// write "exit" if you have finished entering data in console

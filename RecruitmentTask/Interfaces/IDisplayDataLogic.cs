@@ -1,4 +1,4 @@
-﻿namespace DataDisplay
+﻿namespace RecruitmentTask
 {
     public interface IDisplayDataLogic
     {

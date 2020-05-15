@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DataDisplay
+namespace RecruitmentTask
 {
     public interface IDataSaveToFile
     {

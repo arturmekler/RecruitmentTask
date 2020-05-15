@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDisplay
+namespace RecruitmentTask
 {
     /// <summary>
     /// saves to OutputData.txt file

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataParsing.Model;
 
-namespace DataDisplay
+namespace RecruitmentTask
 {
     /// <summary>
     /// prepares data to display on console or to save to file
