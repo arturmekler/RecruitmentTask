@@ -8,7 +8,7 @@ using DataParsing.Model;
 namespace DataParsing
 {
     /// <summary>
-    /// manages objects added to the list of business objects
+    /// manages objects added to the list of business objects 
     /// </summary>
     class BusinessObjectManager
     {
