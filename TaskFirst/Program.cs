@@ -26,7 +26,7 @@ namespace TaskFirst
             var app = Container.Resolve<IApplicationLogic>();
 
             app.DisplayConsole();   // if you want to display the output on console
-            //app.DisplayToFile();    // if you want to save the output to a file
+            app.DisplayToFile();    // if you want to save the output to a file
 
             Console.ReadKey();
         }

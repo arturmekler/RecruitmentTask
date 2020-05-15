@@ -6,6 +6,7 @@ namespace TaskFirst
     public interface IInputDataConvert
     {
         List<Magazine> Magazines { get; }
+        List<BusinessObject> BusinessObjects { get; }
 
         BusinessObject ReadBusinessObject(string[] splitedLine);
         void ReadMagazines(string[] splitedLine, BusinessObject businessObject);
