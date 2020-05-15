@@ -2,7 +2,7 @@
 
 namespace RecruitmentTask
 {
-    public interface IDataSaveToFile
+    public interface IDataSaverToFile
     {
         void SaveToFile(List<string> lines);
     }

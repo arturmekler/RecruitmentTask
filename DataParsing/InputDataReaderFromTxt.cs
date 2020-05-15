@@ -10,7 +10,7 @@ namespace DataParsing
     /// <summary>
     /// Reads data from InputData.txt file
     /// </summary>
-    public class InputDataReadingFromTxt : IInputDataReading
+    public class InputDataReaderFromTxt : IInputDataReader
     {
         public List<string> TextContent()
         {

@@ -10,14 +10,14 @@ namespace DataParsing
     /// <summary>
     /// performs successive tasks for parsing data
     /// </summary>
-    public class ParsingLogic : IParsingLogic
+    public class ParserLogic : IParserLogic
     {
-        IInputDataReading inputDataReading;
-        IInputDataConvert inputDataConvert;
-        IOutputDataPrepare outputDataPrepare;
+        IInputDataReader inputDataReading;
+        IInputDataConverter inputDataConvert;
+        IOutputDataPreparer outputDataPrepare;
 
-        public ParsingLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert,
-             IOutputDataPrepare outputDataPrepare)
+        public ParserLogic(IInputDataReader inputDataReading, IInputDataConverter inputDataConvert,
+             IOutputDataPreparer outputDataPrepare)
         {
             this.inputDataConvert = inputDataConvert;
             this.inputDataReading = inputDataReading;

@@ -2,7 +2,7 @@
 
 namespace DataParsing
 {
-    public interface IInputDataReading
+    public interface IInputDataReader
     {
         List<string> TextContent();
     }

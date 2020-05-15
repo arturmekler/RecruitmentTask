@@ -9,7 +9,7 @@ namespace RecruitmentTask
     /// <summary>
     /// saves to OutputData.txt file
     /// </summary>
-    class DataSaveToFile : IDataSaveToFile
+    class DataSaverToFile : IDataSaverToFile
     {
         public void SaveToFile(List<string> lines)
         {

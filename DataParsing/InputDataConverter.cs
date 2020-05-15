@@ -10,7 +10,7 @@ namespace DataParsing
     /// <summary>
     /// converts data to business objects and magazines
     /// </summary>
-    public class InputDataConvert : IInputDataConvert
+    public class InputDataConverter : IInputDataConverter
     {
         
         public List<Magazine> Magazines { get; set; } = new List<Magazine>();

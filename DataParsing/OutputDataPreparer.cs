@@ -10,7 +10,7 @@ namespace DataParsing
     /// <summary>
     /// Sorts business objects by quantity and alphabetically
     /// </summary>
-    public class OutputDataPrepare : IOutputDataPrepare
+    public class OutputDataPreparer : IOutputDataPreparer
     {
         public List<Magazine> OutputSorting(List<Magazine> magazines)
         {

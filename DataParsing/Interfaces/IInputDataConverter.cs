@@ -3,7 +3,7 @@ using DataParsing.Model;
 
 namespace DataParsing
 {
-    public interface IInputDataConvert
+    public interface IInputDataConverter
     {
         List<Magazine> Magazines { get; }
         List<BusinessObject> BusinessObjects { get; }

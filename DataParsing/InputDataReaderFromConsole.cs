@@ -9,7 +9,7 @@ namespace DataParsing
     /// <summary>
     /// reads text from console
     /// </summary>
-    public class InputDataReadingFromConsole : IInputDataReading
+    public class InputDataReaderFromConsole : IInputDataReader
     {
         public List<string> TextContent()
         {

@@ -13,11 +13,11 @@ namespace RecruitmentTask
     /// </summary>
     public class DisplayDataLogic : IDisplayDataLogic
     {
-        IDataSaveToFile dataSaveToFile;
+        IDataSaverToFile dataSaveToFile;
         IDisplayData display;
-        IParsingLogic parsingLogic;
+        IParserLogic parsingLogic;
 
-        public DisplayDataLogic(IDataSaveToFile dataSaveToFile, IDisplayData display, IParsingLogic parsingLogic)
+        public DisplayDataLogic(IDataSaverToFile dataSaveToFile, IDisplayData display, IParserLogic parsingLogic)
         {
             this.dataSaveToFile = dataSaveToFile;
             this.display = display;

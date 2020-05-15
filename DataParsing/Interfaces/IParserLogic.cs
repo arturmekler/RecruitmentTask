@@ -3,7 +3,7 @@ using DataParsing.Model;
 
 namespace DataParsing
 {
-    public interface IParsingLogic
+    public interface IParserLogic
     {
         List<Magazine> OutputData();
     }

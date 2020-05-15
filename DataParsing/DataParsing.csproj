@@ -41,18 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParsingLogic.cs" />
+    <Compile Include="ParserLogic.cs" />
     <Compile Include="BusinessObjectManager.cs" />
-    <Compile Include="InputDataConvert.cs" />
-    <Compile Include="InputDataReadingFromConsole.cs" />
-    <Compile Include="InputDataReadingFromTxt.cs" />
-    <Compile Include="Interfaces\IParsingLogic.cs" />
-    <Compile Include="Interfaces\IInputDataConvert.cs" />
-    <Compile Include="Interfaces\IInputDataReading.cs" />
-    <Compile Include="Interfaces\IOutputDataPrepare.cs" />
+    <Compile Include="InputDataConverter.cs" />
+    <Compile Include="InputDataReaderFromConsole.cs" />
+    <Compile Include="InputDataReaderFromTxt.cs" />
+    <Compile Include="Interfaces\IParserLogic.cs" />
+    <Compile Include="Interfaces\IInputDataConverter.cs" />
+    <Compile Include="Interfaces\IInputDataReader.cs" />
+    <Compile Include="Interfaces\IOutputDataPreparer.cs" />
     <Compile Include="Model\BusinessObject.cs" />
     <Compile Include="Model\Magazine.cs" />
-    <Compile Include="OutputDataPrepare.cs" />
+    <Compile Include="OutputDataPreparer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

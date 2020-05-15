@@ -17,14 +17,14 @@ namespace RecruitmentTask
         static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<ParsingLogic>().As<IParsingLogic>();
-            builder.RegisterType<InputDataConvert>().As<IInputDataConvert>();
-            builder.RegisterType<OutputDataPrepare>().As<IOutputDataPrepare>();
+            builder.RegisterType<ParserLogic>().As<IParserLogic>();
+            builder.RegisterType<InputDataConverter>().As<IInputDataConverter>();
+            builder.RegisterType<OutputDataPreparer>().As<IOutputDataPreparer>();
             builder.RegisterType<DisplayData>().As<IDisplayData>();
-            builder.RegisterType<DataSaveToFile>().As<IDataSaveToFile>();
+            builder.RegisterType<DataSaverToFile>().As<IDataSaverToFile>();
             builder.RegisterType<DisplayDataLogic>().As<IDisplayDataLogic>();
             //builder.RegisterType<InputDataReadingFromConsole>().As<IInputDataReading>();    // if you want read input from console
-            builder.RegisterType<InputDataReadingFromTxt>().As<IInputDataReading>();        // if you want read input from txt file
+            builder.RegisterType<InputDataReaderFromTxt>().As<IInputDataReader>();        // if you want read input from txt file
 
             Container = builder.Build();
 
