@@ -5,8 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskFirst
+namespace DataParsing
 {
+    /// <summary>
+    /// Reads data from InputData.txt file
+    /// </summary>
     public class InputDataReadingFromTxt : IInputDataReading
     {
         public List<string> TextContent()

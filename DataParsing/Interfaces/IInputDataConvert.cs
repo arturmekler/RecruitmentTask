@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataParsing
 {
     public interface IInputDataConvert
     {
         List<Magazine> Magazines { get; }
         List<BusinessObject> BusinessObjects { get; }
 
-        BusinessObject ReadBusinessObject(string[] splitedLine);
+        BusinessObject ReadBusinessObject(string[] splittedLine);
         void ReadMagazines(string[] splitedLine, BusinessObject businessObject);
-        string[] Spliting(string line);
+        string[] Splitting(string line);
     }
 }

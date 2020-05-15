@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataDisplay
 {
+    /// <summary>
+    /// prepares data to display on console or to save to file
+    /// </summary>
     class DisplayData : IDisplayData
     {
         public void OutputToConsole(List<Magazine> magazines)

@@ -3,26 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataParsing
 {
-    public class ApplicationLogic : IApplicationLogic
+    /// <summary>
+    /// performs successive tasks for parsing data
+    /// </summary>
+    public class ParsingLogic : IParsingLogic
     {
         IInputDataReading inputDataReading;
         IInputDataConvert inputDataConvert;
-        IDataSaveToFile dataSaveToFile;
         IOutputDataPrepare outputDataPrepare;
-        IDisplayData display;
 
-        public ApplicationLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert,
-            IDataSaveToFile dataSaveToFile, IOutputDataPrepare outputDataPrepare, IDisplayData display)
+        public ParsingLogic(IInputDataReading inputDataReading, IInputDataConvert inputDataConvert,
+             IOutputDataPrepare outputDataPrepare)
         {
             this.inputDataConvert = inputDataConvert;
             this.inputDataReading = inputDataReading;
-            this.dataSaveToFile = dataSaveToFile;
             this.outputDataPrepare = outputDataPrepare;
-            this.display = display;
         }
 
         public List<Magazine> OutputData()
@@ -33,7 +32,7 @@ namespace TaskFirst
             var inputDataContent = inputDataReading.TextContent();
             foreach (var el in inputDataContent)
             {
-                var splittedLine = inputDataConvert.Spliting(el);
+                var splittedLine = inputDataConvert.Splitting(el);
                 var businessObject = inputDataConvert.ReadBusinessObject(splittedLine);
                 inputDataConvert.ReadMagazines(splittedLine, businessObject);
             }
@@ -41,17 +40,6 @@ namespace TaskFirst
             var magazines = inputDataConvert.Magazines;
             var sortedMagazines = outputDataPrepare.OutputSorting(magazines);
             return sortedMagazines;
-        }
-
-        public void DisplayConsole()
-        {
-            display.OutputToConsole(OutputData());
-        }
-
-        public void DisplayToFile()
-        {
-            var dataToSaveToFile = display.OutputToFile(OutputData());
-            dataSaveToFile.SaveToFile(dataToSaveToFile);
         }
     }
 }

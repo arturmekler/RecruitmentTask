@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskFirst.Model;
+using DataParsing.Model;
 
-namespace TaskFirst
+namespace DataParsing
 {
+    /// <summary>
+    /// manages objects added to the list of business objects 
+    /// </summary>
     class BusinessObjectManager
     {
         public static void AddBusinessObjectToList(Tuple<int, BusinessObject> tuple, 

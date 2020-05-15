@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskFirst
+namespace DataParsing
 {
-    class InputDataReadingFromConsole : IInputDataReading
+    /// <summary>
+    /// reads text from console
+    /// </summary>
+    public class InputDataReadingFromConsole : IInputDataReading
     {
         public List<string> TextContent()
         {

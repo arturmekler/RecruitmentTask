@@ -6,12 +6,27 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B58850FA-6D78-4ED8-8848-2EDC6510EF1E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TaskFirst</RootNamespace>
-    <AssemblyName>TaskFirst</AssemblyName>
+    <RootNamespace>DataDisplay</RootNamespace>
+    <AssemblyName>DataDisplay</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DataDisplay.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=5.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -56,22 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationLogic.cs" />
-    <Compile Include="BusinessObjectManager.cs" />
     <Compile Include="DisplayData.cs" />
-    <Compile Include="Interfaces\IDisplayData.cs" />
-    <Compile Include="InputDataReadingFromConsole.cs" />
-    <Compile Include="Interfaces\IApplicationLogic.cs" />
-    <Compile Include="Interfaces\IDataSaveToFile.cs" />
-    <Compile Include="Interfaces\IInputDataConvert.cs" />
-    <Compile Include="Interfaces\IInputDataReading.cs" />
-    <Compile Include="InputDataConvert.cs" />
-    <Compile Include="InputDataReadingFromTxt.cs" />
-    <Compile Include="Interfaces\IOutputDataPrepare.cs" />
-    <Compile Include="Model\BusinessObject.cs" />
-    <Compile Include="Model\Magazine.cs" />
-    <Compile Include="OutputDataPrepare.cs" />
     <Compile Include="DataSaveToFile.cs" />
+    <Compile Include="DisplayDataLogic.cs" />
+    <Compile Include="Interfaces\IDataSaveToFile.cs" />
+    <Compile Include="Interfaces\IDisplayData.cs" />
+    <Compile Include="Interfaces\IDisplayDataLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,10 +88,27 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataParsing\DataParsing.csproj">
+      <Project>{e0481f26-887c-4e36-9793-c1af2934226f}</Project>
+      <Name>DataParsing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="InputData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
