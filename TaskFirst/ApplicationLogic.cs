@@ -27,10 +27,10 @@ namespace TaskFirst
 
         public List<Magazine> OutputData()
         {
-
-            var inputDataContent = inputDataReading.TextContent();
             inputDataConvert.Magazines.Clear();
             inputDataConvert.BusinessObjects.Clear();
+
+            var inputDataContent = inputDataReading.TextContent();
             foreach (var el in inputDataContent)
             {
                 var splittedLine = inputDataConvert.Spliting(el);
