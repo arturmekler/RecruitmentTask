@@ -77,9 +77,9 @@
     <Compile Include="DisplayData.cs" />
     <Compile Include="DataSaveToFile.cs" />
     <Compile Include="DisplayDataLogic.cs" />
-    <Compile Include="IDataSaveToFile.cs" />
-    <Compile Include="IDisplayData.cs" />
-    <Compile Include="IDisplayDataLogic.cs" />
+    <Compile Include="Interfaces\IDataSaveToFile.cs" />
+    <Compile Include="Interfaces\IDisplayData.cs" />
+    <Compile Include="Interfaces\IDisplayDataLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
