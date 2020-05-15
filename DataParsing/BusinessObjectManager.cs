@@ -10,7 +10,7 @@ namespace DataParsing
     /// <summary>
     /// manages objects added to the list of business objects 
     /// </summary>
-    class BusinessObjectManager
+    static class BusinessObjectManager
     {
         public static void AddBusinessObjectToList(Tuple<int, BusinessObject> tuple, 
             List<Tuple<int, BusinessObject>> businessObjectsWithCount)
